@@ -22,6 +22,15 @@ For 1 incomplete week of contributions:
 If 1 contribution is done during one week, we plug all square (1 week) with roads
 Else, put trees and wild stuff on non-contributed square
 
+
+##### Curl get contributions
+```bash
+curl --location --request POST 'https://api.github.com/graphql' \
+--header 'Authorization: Basic XXX' \
+--header 'Content-Type: application/json' \
+--data-raw '{"query":"{\n  user(login: \"gantoin\") {\n    contributionsCollection {\n      contributionCalendar {\n        totalContributions\n        weeks {\n          contributionDays {\n            contributionCount\n            weekday\n            date\n          }\n        }\n      }\n    }\n  }\n}","variables":{}}'
+```
+
 ##### Schema
 ![](schema.png)
 
