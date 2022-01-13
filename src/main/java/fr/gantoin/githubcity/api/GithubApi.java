@@ -22,7 +22,7 @@ public class GithubApi {
     @GetMapping("/test")
     public void test() throws IOException {
         HttpResponse<String> response = Unirest.post("https://api.github.com/graphql")
-                .header("Authorization", "Basic Z2FudG9pbjpnaHBfY1o0NmpwdFhoejdxZmZaUmx2TnNnTnZ5a29yUDJIMTBOWXV4")
+                .header("Authorization", "Basic XX")
                 .header("Content-Type", "application/json")
                 .body("{\"query\":\"{\\n  user(login: \\\"gantoin\\\") {\\n    contributionsCollection {\\n      contributionCalendar {\\n        totalContributions\\n        weeks {\\n          contributionDays {\\n            contributionCount\\n            weekday\\n            date\\n          }\\n        }\\n      }\\n    }\\n  }\\n}\",\"variables\":{}}")
                 .asString();
