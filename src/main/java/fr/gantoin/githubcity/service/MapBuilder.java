@@ -1,5 +1,9 @@
 package fr.gantoin.githubcity.service;
 
+import static fr.gantoin.githubcity.domain.BuildingTypeEnum.BUILDING;
+import static fr.gantoin.githubcity.domain.BuildingTypeEnum.HOUSE;
+import static fr.gantoin.githubcity.domain.BuildingTypeEnum.SPECIAL;
+
 import org.springframework.stereotype.Service;
 
 import fr.gantoin.githubcity.domain.Chunk;
@@ -22,28 +26,56 @@ public class MapBuilder {
                     week.getNbContributionOnFriday() > 0 && //
                     week.getNbContributionOnSaturday() > 0 && //
                     week.getNbContributionOnSunday() > 0) {
-                chunk.setSpecialBuilding(1);
+                chunk.setSpecialBuilding(SPECIAL);
             } else {
                 if (week.getNbContributionOnMonday() > 0) {
-                    chunk.setHouseSlot1(1);
+                    if (week.getNbContributionOnMonday() > 5) {
+                        chunk.setHouseSlot1(BUILDING);
+                    } else {
+                        chunk.setHouseSlot1(HOUSE);
+                    }
                 }
                 if (week.getNbContributionOnTuesday() > 0) {
-                    chunk.setHouseSlot2(1);
+                    if (week.getNbContributionOnTuesday() > 5) {
+                        chunk.setHouseSlot2(BUILDING);
+                    } else {
+                        chunk.setHouseSlot2(HOUSE);
+                    }
                 }
                 if (week.getNbContributionOnWednesday() > 0) {
-                    chunk.setHouseSlot3(1);
+                    if (week.getNbContributionOnWednesday() > 5) {
+                        chunk.setHouseSlot3(BUILDING);
+                    } else {
+                        chunk.setHouseSlot3(HOUSE);
+                    }
                 }
                 if (week.getNbContributionOnThursday() > 0) {
-                    chunk.setHouseSlot4(1);
+                    if (week.getNbContributionOnThursday() > 5) {
+                        chunk.setHouseSlot4(BUILDING);
+                    } else {
+                        chunk.setHouseSlot4(HOUSE);
+                    }
                 }
                 if (week.getNbContributionOnFriday() > 0) {
-                    chunk.setHouseSlot5(1);
+                    if (week.getNbContributionOnFriday() > 5) {
+                        chunk.setHouseSlot5(BUILDING);
+                    } else {
+                        chunk.setHouseSlot5(HOUSE);
+                    }
                 }
                 if (week.getNbContributionOnSaturday() > 0) {
-                    chunk.setHouseSlot6(1);
+                    if (week.getNbContributionOnSaturday() > 5) {
+                        chunk.setHouseSlot6(BUILDING);
+                    } else {
+                        chunk.setHouseSlot6(HOUSE);
+                    }
                 }
                 if (week.getNbContributionOnSunday() > 0) {
-                    chunk.setHouseSlot7(1);
+                    if (week.getNbContributionOnSunday() > 5) {
+                        chunk.setHouseSlot7(BUILDING);
+                    } else {
+                        chunk.setHouseSlot7(HOUSE);
+                    }
                 }
             }
             map.getChunks().add(chunk);
