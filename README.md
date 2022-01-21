@@ -50,4 +50,3 @@ Useful links:
 ##### TODO
 
 Manage nb of contribution per day.
-Is it useful to create special building for a first version ? Probably no, todo: make a functional simple version

@@ -11,20 +11,18 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Chunk {
 
-    private BuildingTypeEnum houseSlot1;
+    private BuildingSizeEnum houseSlot1;
 
-    private BuildingTypeEnum houseSlot2;
+    private BuildingSizeEnum houseSlot2;
 
-    private BuildingTypeEnum houseSlot3;
+    private BuildingSizeEnum houseSlot3;
 
-    private BuildingTypeEnum houseSlot4;
+    private BuildingSizeEnum houseSlot4;
 
-    private BuildingTypeEnum houseSlot5;
+    private BuildingSizeEnum houseSlot5;
 
-    private BuildingTypeEnum houseSlot6;
+    private BuildingSizeEnum houseSlot6;
 
-    private BuildingTypeEnum houseSlot7;
-
-    private BuildingTypeEnum specialBuilding;
+    private BuildingSizeEnum houseSlot7;
 
 }

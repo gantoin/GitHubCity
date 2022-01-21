@@ -20,7 +20,9 @@ import kong.unirest.json.JSONObject;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class MapBuilderTest {
 
-    private final MapBuilder mapBuilder = new MapBuilder();
+    private final BuildingSizeService buildingSizeService = new BuildingSizeService();
+    
+    private final MapBuilder mapBuilder = new MapBuilder(buildingSizeService);
 
     private final YearlyContributionMapper yearlyContributionMapper = new YearlyContributionMapper();
 
