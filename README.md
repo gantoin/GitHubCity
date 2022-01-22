@@ -50,3 +50,7 @@ Useful links:
 ##### TODO
 
 Manage nb of contribution per day.
+
+Table of 7 columns and fill 53 cells, put field in each cell and adapt css
+
+Create templates
