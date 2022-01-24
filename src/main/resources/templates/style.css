@@ -1,0 +1,23 @@
+html, body {
+    background-color: #f2f2f2;
+}
+
+.map {
+    background-color: #49b293;
+    width: 800px;
+    height: 800px;
+    margin: 0px auto 0 auto;
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chunk {
+    width: 80px;
+    height: 80px;
+    margin: 0px auto 0 auto;
+    border-style: solid;
+    border-color: green;
+}
